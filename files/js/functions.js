@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Signup Forms
 $(function(){
   $('.form-display .mc-field-group input').focusout(function(){
@@ -9,12 +8,12 @@ $(function(){
       $(this).addClass('has-value');
     }
   });
-=======
-$(function() {
-  // dsss
-  smoothScroll(300);
->>>>>>> 11867e35e751920c1c4a62bdcfa6618dedbb95fe
 });
+
+// $(function() {
+//   // dsss
+//   smoothScroll(300);
+// });
 
 // Stop Image being Draggable
 $('img').attr('draggable', 'false');
@@ -51,3 +50,19 @@ function toggleGlitch(){
 $(function(){
   setInterval(function(){toggleGlitch();}, 4000);
 });
+
+// // Mobile Nav Toggle
+// $(function(){
+//   $('.span-toggle').click(function() {
+//     $('.span-toggle').toggleClass('is-open');
+//   });
+// });
+
+// Mobile Nav Toggle
+$(function mobileNav() {
+  $('.mobile-nav-toggle').on('click', function(){
+    var status = $(this).hasClass('is-open');
+    if(status){ $('.mobile-nav-toggle, .mobile-header').removeClass('is-open'); }
+    else { $('.mobile-nav-toggle, .mobile-header').addClass('is-open'); }
+  });
+})

@@ -6,7 +6,6 @@
   transition: $base-transition2
   overflow: hidden
 
-
   .penrose-background, .gradient-background
     // border: 2px solid blue
     height: 100%
@@ -16,6 +15,8 @@
       size: cover
 
   .gradient-background
+    background:
+      image: url(/assets/img/backgrounds/gradient-background.svg)
     // float: right
     width: 75%
     right: 0
@@ -23,6 +24,8 @@
     pointer-events: none
 
   .penrose-background
+    background:
+      image: url(/assets/img/backgrounds/penrose-diagram.svg)
     width: 100%
     z-index: -1
 
@@ -40,63 +43,13 @@
       transform: translateX(47.5%)
       // margin-top: $base-spacing*0.7
 
-    .site-nav
-      position: absolute
-      right: 0
-      top: $base-spacing
-      display: flex
-      justify-content: space-between
 
-      .menu-item
-        // line-height: $base-spacing*2
-        margin: 0 $base-spacing
-        position: relative
-        line-height: 1
-        display: block
-
-        .menu-item-name
-          color: white
-          overflow: hidden
-          // padding: 0 0.25em
-          text-transform: uppercase
-          font-weight: 600
-          // border: 2px solid red
-          position: relative
-          display: inline-block
-
-        // .menu-item-name.activated
-        //   color: $tet-semiboldorange
-
-        .menu-item-name::before,
-        .menu-item-name::after
-        	content: ''
-        	position: absolute
-        	top: 0
-        	left: 0
-        	width: 100%
-        	height: 100%
-        	background: $tet-pureorange
-        	transform: translate3d(-100%,0,0) translate3d(-1px,0,0)
-        	transition: all 0.5s $ease-in-out-quint
-
-        // .menu-item-name::before
-        //   background: $tet-pureorange
-
-        .menu-item-name::after
-          // background: rgba($tet-pureorange, 1)
-          top: calc(50% - 2px)
-          height: 4px
-          // z-index: -50
-
-      .menu-item:hover .menu-item-name::before
-      	transform: translate3d(100%,0,0) translate3d(1px,0,0)
-
-      .menu-item-name.activated::after,
-      .menu-item:hover .menu-item-name::after
-        transform: translate3d(0,0,0)
 
       // .menu-item-name.activated::after
       //   background: $tet-blackorange
+
+  .mobile-page.social-media
+    display: none
 
   .copyright-box
     height: 0
@@ -280,3 +233,34 @@
 
         span::before
           color: $tet-pureorange
+
+@media #{$mc-xxxxlarge}, #{$tq-medium}, #{$tq-large}
+  .sliced-content
+    width: 100%
+    height: 93%
+    bottom: 0
+    position: absolute
+
+    .nav-bar-box
+      display: none
+
+    .mobile-page.social-media
+      display: flex
+
+    .copyright-box
+      font-size: $base-spacing*1.1
+
+    .gradient-background
+      background:
+        image: url(/assets/img/backgrounds/gradient-background-rotated.svg)
+      width: 100%
+      height: 75%
+      bottom: 0
+
+    .penrose-background
+      background:
+        image: url(/assets/img/backgrounds/penrose-rotated.svg)
+
+    .contact-box
+      height: 85%
+      width: 75%

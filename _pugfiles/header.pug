@@ -4,29 +4,46 @@ mixin nav-content()
 
 header
   //- .header-position  
+      
+  .mobile-nav-toggle
+    span
+        
+  img.logotype(src="{{site.baseurl}}/assets/img/logos/tetronian-logotype.svg", title="Tetronian", alt="Tetronian")
+
   .tetronian-logo
     a(href="{{site.baseurl}}/")
       img(src="{{site.baseurl}}/assets/img/logos/tetronian-logo.svg", title="Tetronian", alt="Tetronian").logo
-      //- img(src="{{site.baseurl}}/assets/img/tetronian-logotype.svg", title="Tetronian", alt="Tetronian").logotype
-  .social-media
-    //- .grid-item
-    //-   a(target="_blank" href="https://www.instagram.com/tetronian/").slash
-    //-     .fab.fa-instagram
-    //- .grid-item
-    //-   a(target="_blank" href="https://www.facebook.com/tetronian/").slash
-    //-     .fab.fa-facebook-f
-    //- .grid-item
-    //-   a(target="_blank" href="https://www.twitter.com/tetronian/").slash
-    //-     .fab.fa-twitter
-    //- .grid-item
-    //-   a(target="_blank" href="http://tetronian.tumblr.com/").slash
-    //-     .fab.fa-tumblr
-    //- .grid-item
-    //-   a(target="_blank" href="https://www.pinterest.com/tetronian/").slash
-    //-     .fab.fa-pinterest-p
-    //- .grid-item
-    //-   a(target="_blank" href="https://plus.google.com/+tetronian").slash
-    //-     .fab.fa-google-plus-g
+
+  .mobile-header
+    .mobile-box
+      .mobile.site-nav
+        a(href="{{site.baseurl}}/").menu-item 
+          span.menu-item-name.activated Home
+        a(href="{{site.baseurl}}/404").menu-item  
+          span.menu-item-name Shop
+        a(href="{{site.baseurl}}/contact").menu-item  
+          span.menu-item-name Contact
+      .mobile.social-media
+        .grid-item
+          a(target="_blank" href="https://www.instagram.com/tetronian/").slash
+            img(src="{{site.baseurl}}/assets/img/icons/white/instagram.svg", title="Instagram", alt="Instagram")
+        .grid-item
+          a(target="_blank" href="https://www.facebook.com/tetronian/").slash
+            img(src="{{site.baseurl}}/assets/img/icons/white/facebook-f.svg", title="Facebook", alt="Facebook")
+        .grid-item
+          a(target="_blank" href="https://www.twitter.com/tetronian/").slash
+            img(src="{{site.baseurl}}/assets/img/icons/white/twitter.svg", title="Twitter", alt="Twitter")
+        .grid-item
+          a(target="_blank" href="http://tetronian.tumblr.com/").slash
+            img(src="{{site.baseurl}}/assets/img/icons/white/tumblr.svg", title="Tumblr", alt="Tumblr")
+        .grid-item
+          a(target="_blank" href="https://www.pinterest.com/tetronian/").slash
+            img(src="{{site.baseurl}}/assets/img/icons/white/pinterest-p.svg", title="Pinterest", alt="Pinterest")
+        //- .grid-item
+        //-   a(target="_blank" href="https://plus.google.com/+tetronian").google-plus.slash
+        //-     img(src="{{site.baseurl}}/assets/img/icons/white/google-plus.svg", title="Google+", alt="Google+")
+  
+  .desktop.social-media
     .grid-item
       a(target="_blank" href="https://www.instagram.com/tetronian/").slash
         img(src="{{site.baseurl}}/assets/img/icons/instagram.svg", title="Instagram", alt="Instagram")
@@ -45,12 +62,3 @@ header
     .grid-item
       a(target="_blank" href="https://plus.google.com/+tetronian").google-plus.slash
         img(src="{{site.baseurl}}/assets/img/icons/google-plus.svg", title="Google+", alt="Google+")
-    
-  .mobile-nav-toggle
-    span
-    //- h1 Tetroniansasa
-    //- .fas.fa-car
-    //- 
-    //- nav.site-nav
-    //-   +nav-content()
-    
