@@ -28,11 +28,13 @@
         .diagonal-spacing
         .diagonal-spacing
         .diagonal-spacing
-        .diagonal-spacing
-        p(style='white-space:pre;')
-          | Hi Trionian traveler,
-          br
-          | It looks like you're stuck between dimensions...
+        //- .diagonal-spacing
+        p Hi Trionian traveler,
+        p.this-br It looks like you're stuck between dimensions...
+        //- p(style='white-space:pre;')
+        //-   | Hi Trionian traveler,
+        //-   br.this-br
+        //-   | It looks like you're stuck between dimensions...
         a({{site.baseurl}}href="{{site.baseurl}}/")
           button.button
             span(data-letters='Back to homepage') Back to homepage
@@ -65,7 +67,7 @@
     .copyright
       p &copy; 2019 Tetronian
   
-  .penrose-background(style="background-image: url({{site.baseurl}}/assets/img/backgrounds/penrose-diagram.svg)")
+  .penrose-background
   
-  .gradient-background(style="background-image: url({{site.baseurl}}/assets/img/backgrounds/gradient-background.svg)")
+  .gradient-background
   

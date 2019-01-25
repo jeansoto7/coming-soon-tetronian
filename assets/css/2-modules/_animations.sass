@@ -19,7 +19,7 @@
 
 //// Forwards notify animations ////////////////////////////////////////////////
 .notify.is-opened .mc-field-group label,
-#typewriter
+#typewriter,
   animation: typewriter 1s steps(22) 1s 1 normal both, blinkTextCursor 500ms steps(22) infinite normal, border-fade 1.2s forwards 1s
   white-space: nowrap
   overflow: hidden
@@ -33,6 +33,12 @@
 
 .notify.is-opened .notify-box::after
   animation: lineHeightAfter 1s forwards 0.5s, lineWidthAfter 1s forwards 1.5s
+
+.mobile-header.is-open .mobile-box::before
+  animation: lineWidthBeforeWhite 1s forwards 0.5s, lineHeightBeforeWhite 1s forwards 1.5s
+
+.mobile-header.is-open .mobile-box::after
+  animation: lineHeightAfterWhite 1s forwards 0.5s, lineWidthAfterWhite 1s forwards 1.5s
 
 
 //// Reverse notify animations ////////////////////////////////////////////////
@@ -97,7 +103,7 @@
     transform: scale3d(1,1,1)
 
 
-//-------------------- Box Line Transition
+//-------------------- Box Line Transition Orange
 @keyframes lineWidthBefore
   0%
     border-top-color: $tet-pureorange
@@ -128,4 +134,38 @@
   100%
     height: 100%
     border-left-color: $tet-pureorange
+    // transition: height 0.25s ease-out
+
+
+//-------------------- Box Line Transition Lightgrey
+@keyframes lineWidthBeforeWhite
+  0%
+    border-top-color: $tet-lightgrey
+  100%
+    width: 100%
+    border-top-color: $tet-lightgrey
+    // transition: width 0.25s ease-out
+
+@keyframes lineHeightBeforeWhite
+  0%
+    border-right-color: $tet-lightgrey
+  100%
+    height: 100%
+    border-right-color: $tet-lightgrey
+    // transition: height 0.25s ease-out
+
+@keyframes lineWidthAfterWhite
+  0%
+    border-bottom-color: $tet-lightgrey
+  100%
+    border-bottom-color: $tet-lightgrey
+    width: 100%
+    // transition: width 0.25s ease-out
+
+@keyframes lineHeightAfterWhite
+  0%
+    border-left-color: $tet-lightgrey
+  100%
+    height: 100%
+    border-left-color: $tet-lightgrey
     // transition: height 0.25s ease-out

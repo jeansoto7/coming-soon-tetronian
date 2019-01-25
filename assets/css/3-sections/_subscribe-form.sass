@@ -5,7 +5,7 @@
   padding: $base-spacing*3
   position: absolute
   z-index: 3
-  top: 0
+  bottom: 0
   opacity: 0
   pointer-events: none
   transition: $base-transition2
@@ -63,47 +63,70 @@
     .icon-close:hover .icon-45
       transform: rotate(45deg)
 
-  .subscribe-form
-    // border: 2px solid red
+  .form-display
+    padding: 0 $base-spacing*6
+
+    input[type="text"],
+    input[type="email"]
+      border-bottom: $base-spacing/8 solid $tet-pureorange
+      padding: 0 $base-spacing/4
+
+    input[type="text"],
+    input[type="email"],
+    label
+      font-size: $base-spacing*2
+      line-height: $base-spacing*1.8
+      color: $tet-blackorange
+
+    label
+      margin-left: $base-spacing/4
+      border-right: 2px solid $tet-blackorange
+      transform: translateY(-50%)
+      // +transform(translateY(-50%))
+      // +position(absolute, 50% null null 0)
+      // opacity: 0
+
+    input:focus + label,
+    input.has-value + label
+      +transform(translateY(-30%))
+      top: -$base-spacing/2
+      font-size: $base-spacing*1
+      margin-left: $base-spacing/1.5
+      font-weight: 700
+
+    .group-email, .group-submit
+      margin-top: $base-spacing*5
+
+    .button
+      font-size: $base-spacing*0.9
+      float: right
+      // right: 0
+      transform: translateX(-50%)
+      // position: absolute
+      opacity: 0
+
+@media #{$mc-xxxxlarge}, #{$tq-medium}, #{$tq-large}
+  .notify
+    height: 93%
+    padding: $base-spacing*3 $base-spacing*2
+
+    .notify-box
+      // height: 80%
+      // width: 90%
+      // margin: auto
+      // top: 50%
+      // left: 50%
+      // transform: translateX(-50%) translateY(-50%)
+      // position: absolute
 
     .form-display
-      padding: 0 $base-spacing*6
-
-      input[type="text"],
-      input[type="email"]
-        border-bottom: $base-spacing/8 solid $tet-pureorange
-        padding: 0 $base-spacing/4
+      padding: 0 $base-spacing
 
       input[type="text"],
       input[type="email"],
       label
-        font-size: $base-spacing*2
-        line-height: $base-spacing*1.8
-        color: $tet-blackorange
-
-      label
-        margin-left: $base-spacing/4
-        border-right: 2px solid $tet-blackorange
-        transform: translateY(-50%)
-        // +transform(translateY(-50%))
-        // +position(absolute, 50% null null 0)
-        // opacity: 0
+        font-size: $base-spacing*1.4
 
       input:focus + label,
       input.has-value + label
-        +transform(translateY(-30%))
-        top: -$base-spacing/2
-        font-size: $base-spacing*1
-        margin-left: $base-spacing/1.5
-        font-weight: 700
-
-      .group-email, .group-submit
-        margin-top: $base-spacing*5
-
-      .button
-        font-size: $base-spacing*0.9
-        float: right
-        // right: 0
-        transform: translateX(-50%)
-        // position: absolute
-        opacity: 0
+        font-size: $base-spacing*.8
