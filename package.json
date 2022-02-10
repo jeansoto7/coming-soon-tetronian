@@ -34,7 +34,7 @@
     "imagemin-optipng": "^5.2.1",
     "imagemin-svgo": "^7.0.0",
     "jstransformer-jade-jekyll": "^1.0.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.14.4",
     "psi": "^3.1.0",
     "pug": "^2.0.3"
